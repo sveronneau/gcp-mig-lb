@@ -10,8 +10,10 @@ Once all is setup, hit the Load Balancer Public IP
 1) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
 2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
 3) Update the *apache.json* and *variables.tf* files  with your personal information
-4) packer apache.json
-5) terraform init
-6) terraform apply
-7) Open a Browser with the IP of your GCP Load Balancer
+4) packer validate apache.json
+5) packer build apache.json
+6) terraform init
+7) terraform plan -out gcp-mig-lb.out
+8) terraform apply
+9) Open a Browser with the IP of your GCP Load Balancer
   * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing /  
