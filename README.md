@@ -7,6 +7,8 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 # Prep
 1) Create a service account and get the JSON file.
   * Follow step 2 and 3 from my [previous blog post](https://www.cloudops.com/2018/02/how-to-deploy-consul-in-gcp-using-terraform-your-first-step-towards-devops-automation/)
+  * Make sure you have the following roles (Compute Admin, Service Account User, Storage Admin)
+
 2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
 3) Update the *apache.json* and *variables.tf* files  with your GCP account information
 
