@@ -5,3 +5,9 @@ Script to create a an instance template from a Packer built image followed by th
 Scripts uses a GCP service account and a JSON file with your account token and VARS defined in variables.tf
 
 Once all is setup, hit the Load Balancer Public IP
+
+# Steps
+1) Update the *apache.json* and *variables.tf* files  with your personal information
+2) packer apache.json
+2) terraform init
+3) terraform apply
