@@ -20,3 +20,6 @@ Once all is setup, hit the Load Balancer Public IP
   * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
 10) Open your browser httpp://frontend_public_ip
   * Hit refresh and you'll see that you are going randomly to your Apache servers
+
+# Cleanup
+1) terraform destroy 
