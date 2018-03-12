@@ -15,6 +15,8 @@ Once all is setup, hit the Load Balancer Public IP
 6) terraform init
 7) terraform plan -out gcp-mig-lb.out
 8) terraform apply
-9) Wait or a bit and open a Browser with the IP of your GCP Load Balancer
+9) Wait or a bit (few minutes)  and open a Browser with the IP of your GCP Load Balancer
   * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing
   * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
+10) Open your browser httpp://frontend_public_ip
+  * Hit refresh and you'll see that you are going randomly to your Apache servers
