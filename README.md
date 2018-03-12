@@ -13,3 +13,5 @@ Once all is setup, hit the Load Balancer Public IP
 4) packer apache.json
 5) terraform init
 6) terraform apply
+7) Open a Browser with the IP of your GCP Load Balancer
+⋅⋅* The IP of your GCP Load Balancer can be found in: Network Services / Load balancing /  
