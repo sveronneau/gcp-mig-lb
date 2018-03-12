@@ -15,5 +15,6 @@ Once all is setup, hit the Load Balancer Public IP
 6) terraform init
 7) terraform plan -out gcp-mig-lb.out
 8) terraform apply
-9) Open a Browser with the IP of your GCP Load Balancer
-  * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing /  
+9) Wait or a bit and open a Browser with the IP of your GCP Load Balancer
+  * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing
+  * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
