@@ -7,8 +7,8 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 Once all is setup, hit the Load Balancer Public IP
 
 # Steps
-1) Install (https://www.packer.io "Packer") and [Terraform]: https://www.terraform.io
-2) Clone this repo
+1) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
+2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
 3) Update the *apache.json* and *variables.tf* files  with your personal information
 4) packer apache.json
 5) terraform init
