@@ -11,18 +11,18 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 
 2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
 3) Update the *apache.json* and *variables.tf* files  with your GCP account information
+4) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
 
 # Steps
-1) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
-2) packer validate apache.json
-3) packer build apache.json
-4) terraform init
-5) terraform plan -out gcp-mig-lb.out
-6) terraform apply
-7) Wait or a bit (few minutes)  and open a Browser with the IP of your GCP Load Balancer
+1) packer validate apache.json
+2) packer build apache.json
+3) terraform init
+4) terraform plan -out gcp-mig-lb.out
+5) terraform apply
+6) Wait or a bit (few minutes)  and open a Browser with the IP of your GCP Load Balancer
   * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing
   * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
-8) Open your browser http://frontend_public_ip
+7) Open your browser http://frontend_public_ip
   * Hit refresh and you'll see that you are going randomly to your Apache servers
 
 # Cleanup
