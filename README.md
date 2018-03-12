@@ -4,8 +4,6 @@ Scripts to create a an instance template from a Packer built image followed by t
 
 Scripts uses a GCP service account and a JSON file with your account token and VARS defined in variables.tf
 
-Once all is setup, hit the Load Balancer Public IP
-
 # Steps
 1) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
 2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
@@ -22,4 +20,4 @@ Once all is setup, hit the Load Balancer Public IP
   * Hit refresh and you'll see that you are going randomly to your Apache servers
 
 # Cleanup
-1) terraform destroy 
+1) terraform destroy
