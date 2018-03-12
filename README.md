@@ -21,3 +21,5 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 
 # Cleanup
 1) terraform destroy
+2) In Compute Engine / Images
+  * Delete your custom image
