@@ -16,7 +16,7 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 9) Wait or a bit (few minutes)  and open a Browser with the IP of your GCP Load Balancer
   * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing
   * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
-10) Open your browser httpp://frontend_public_ip
+10) Open your browser http://frontend_public_ip
   * Hit refresh and you'll see that you are going randomly to your Apache servers
 
 # Cleanup
