@@ -25,6 +25,9 @@ Scripts uses a GCP service account and a JSON file with your account token and V
   * Open your browser http://frontend_public_ip
   * Hit refresh and you'll see that you are going randomly to your Apache servers
 
+# What does the Terraform script do?
+From the custom image, a template will be created and from that, we can create a managed instance group. This will deploy 3 identical instances based on our baked image. It will also inject metadata that will create a static web page that contains the server’s name, internal and external IP. Create a Firewall rule that will allow HTTP traffic to come to that group. This is useful if we want it all to reach our servers. Create a front-end and back-end service fronted by a load balancer and forwarding rules.
+
 # Testing Auto-Healing
 You can easily see this in action by going into (Compute Engine / Instance groups / apache-rmig ) and select one of the instance and delete it.  You'll see a new one taking its place automatically.
 
