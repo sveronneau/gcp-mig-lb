@@ -11,19 +11,25 @@ Scripts uses a GCP service account and a JSON file with your account token and V
 
 2) Clone this [repo](https://github.com/sveronneau/gcp-mig-lb.git)
 3) Update the *apache.json* and *variables.tf* files  with your GCP account information
-4) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io)
+4) Install [Packer](https://www.packer.io) and [Terraform](https://www.terraform.io) in the gcp-mig-lb folder to make things simple.
 
 # Steps
 1) packer validate apache.json
 2) packer build apache.json
 3) terraform init
-4) terraform plan -out gcp-mig-lb.out
+4) terraform plan
 5) terraform apply
 6) Wait or a bit (few minutes)  and open a Browser with the IP of your GCP Load Balancer
   * The IP of your GCP Load Balancer can be found in: Network Services / Load balancing
   * Click on http-lb-url-map and look in the Frontend section, protocol HTTP.  You'll see your Public IP there.
   * Open your browser http://frontend_public_ip
   * Hit refresh and you'll see that you are going randomly to your Apache servers
+
+# Testing Auto-Healing
+You can easily see this in action by going into (Compute Engine / Instance groups / apache-rmig ) and select one of the instance and delete it.  You'll see a new one taking its place automatically.
+
+# Testing Auto-Scaling
+The stress tool as been installed in the golden image we've baked.  To stress an instance and trigger auto-scaling, go into (Compute Engine / Instance groups / apache-rmig ) and click SSH under the Connect option of the instance of your chosing to go in. Once you are inside the instance, just run (stress -c 4) and CPU utilization will spike to 100% on that instance and will trigger auto-scaling after a minute.  When you terminate the stress tool, the scale-down process can take up to 10 minutes.
 
 # Cleanup
 1) terraform destroy
