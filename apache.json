@@ -13,7 +13,7 @@
       "image_name": "apache-golden-{{timestamp}}",
       "zone": "northamerica-northeast1-a",
       "machine_type":"n1-standard-1",
-      "disk_size": "40",
+      "disk_size": "20",
       "on_host_maintenance":"TERMINATE",
       "image_family":"apache"
     }
