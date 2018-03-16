@@ -98,9 +98,9 @@ SCRIPT
     network = "${var.network}"
     #
     # Give a Public IP to instance(s)
-    #access_config {
-    #  // Ephemeral IP
-    #}
+    access_config {
+      // Ephemeral IP
+    }
   }
 
   service_account {
