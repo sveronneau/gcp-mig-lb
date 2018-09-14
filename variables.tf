@@ -13,7 +13,7 @@ variable "machine_type" { default =  "n1-standard-1" }
 variable "source_image" { default =  "apache" } //This is the family tag used when building the Golden Image with Packer.
 variable "network"      { default =  "default" }
 #
-# Managed Instace Group
+# Managed Instance Group
 variable "rmig_name"          { default =  "apache-rmig" }
 variable "base_instance_name" { default =  "apache" }
 variable "target_size"        { default =  "3" }
