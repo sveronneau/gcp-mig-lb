@@ -88,7 +88,7 @@ resource "google_compute_instance_template" "cit" {
     <img src="https://www.datocms-assets.com/2885/1506457071-blog-terraform-list.svg" alt="Terraform" height="100" width="100">
     <img src="https://blog-en.openalfa.com/iconos/logos/apache_httpd.jpg" alt="Apache" height="100" width="100">
     <p><b>Hostname:</b> $(hostname)<br><b>Internal IP:</b> $INT_IP<br><b>External IP:</b> $EXT_IP</p>
-    <p>A <b>Packer</b> built, <b>Terraform</b> deployed, <b>GCP</b> Auto Scalling, Managed Instance Group with Load Balancer serving <b>Apache Web Server</b></p>
+    <p>A <b>Packer</b> built, <b>Terraform</b> deployed, <b>GCP</b> Auto Scaling, Managed Instance Group with Load Balancer serving <b>Apache Web Server</b></p>
     </body>
     </html>
 SCRIPT
