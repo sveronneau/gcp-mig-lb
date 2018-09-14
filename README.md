@@ -32,7 +32,7 @@ From the custom image, a template will be created and from that, we can create a
 You can easily see this in action by going into (Compute Engine / Instance groups / apache-rmig ) and select one of the instance and delete it.  You'll see a new one taking its place automatically.
 
 # Testing Auto-Scaling
-The stress tool as been installed in the golden image we've baked.  To stress an instance and trigger auto-scaling, go into (Compute Engine / Instance groups / apache-rmig ) and click SSH under the Connect option of the instance of your chosing to go in. Once you are inside the instance, just run (stress -c 4) and CPU utilization will spike to 100% on that instance and will trigger auto-scaling after a minute.  When you terminate the stress tool, the scale-down process can take up to 10 minutes.
+The stress tool as been installed in the golden image we've baked.  To stress an instance and trigger auto-scaling, go into (Compute Engine / Instance groups / apache-rmig ) and click SSH under the Connect option of the instance of your choosing to go in. Once you are inside the instance, just run (stress -c 4) and CPU utilization will spike to 100% on that instance and will trigger auto-scaling after a minute.  When you terminate the stress tool, the scale-down process can take up to 10 minutes.
 
 # Cleanup
 1) terraform destroy
